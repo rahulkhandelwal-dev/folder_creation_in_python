@@ -1,0 +1,22 @@
+''' Below code will create folder structure on given path.
+this is learning attempt for OS lib.
+'''
+
+import os
+print('Current Path is: ', os.getcwd())
+new_path = input('Please Enter New Path: ')
+print(new_path)
+os.chdir(new_path)
+# print('New Path is :', os.getcwd())
+
+Proj_Name = input('Please Enter Main Folder Name (e.g. 51308- Laser): ')
+
+child_folders = ['\BRD', '\Mappings', '\QV TDD', '\Estimates', '\Source Query', '\ 4 UPs', '\QV Approvals', '\Project Plan', '\Section Access', '\Reference Files']
+
+# Main Folder
+os.mkdir(Proj_Name)
+
+for i in range(len(child_folders)):
+    os.mkdir(Proj_Name + child_folders[i])
+
+print('Folder Creation Process Completed')
